@@ -54,21 +54,66 @@ CREATE TABLE retail_sales
 - **Null Value Check**: Check for any null values in the dataset and delete records with missing data.
 
 ```sql
-SELECT COUNT(*) FROM retail_sales;
-SELECT COUNT(DISTINCT customer_id) FROM retail_sales;
-SELECT DISTINCT category FROM retail_sales;
+-- count of rows
+select count (*) from retail_sales ;
 
+-- see total table
+SELECT * FROM retail_sales ;
+
+
+-- To see null values ;
 SELECT * FROM retail_sales
-WHERE 
-    sale_date IS NULL OR sale_time IS NULL OR customer_id IS NULL OR 
-    gender IS NULL OR age IS NULL OR category IS NULL OR 
-    quantity IS NULL OR price_per_unit IS NULL OR cogs IS NULL;
+	where 
+		transactions_id is null
+		or
+		sale_date is null
+		or
+		sale_time is null
+		or
+		customer_id is null
+		or
+		gender is null
+		or
+		age is null
+		or
+		category is null
+		or
+		quantiy	is null
+		or
+		price_per_unit is null
+		or
+		cogs is null
+		or
+		total_sale is null ;
 
-DELETE FROM retail_sales
-WHERE 
-    sale_date IS NULL OR sale_time IS NULL OR customer_id IS NULL OR 
-    gender IS NULL OR age IS NULL OR category IS NULL OR 
-    quantity IS NULL OR price_per_unit IS NULL OR cogs IS NULL;
+--  delete null values
+
+DELETE FROM RETAIL_SALES
+	where 
+		transactions_id is null
+		or
+		sale_date is null
+		or
+		sale_time is null
+		or
+		customer_id is null
+		or
+		gender is null
+		or
+		age is null
+		or
+		category is null
+		or
+		quantiy	is null
+		or
+		price_per_unit is null
+		or
+		cogs is null
+		or
+		total_sale is null ;
+
+
+
 ```
 
 ### 3. Data Analysis & Findings
@@ -244,5 +289,6 @@ For more content on SQL, data analysis, and other data-related topics, make sure
 - **Discord**: [Join our community to learn and grow together](https://discord.gg/36h5f2Z5PK)
 
 Thank you for your support, and I look forward to connecting with you!
+
 
 
